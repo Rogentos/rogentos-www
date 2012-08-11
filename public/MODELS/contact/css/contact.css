@@ -1,0 +1,27 @@
+#contact_table {
+
+}
+    #contact_table tr{
+
+    }
+        #contact_table tr td {
+            vertical-align: top;
+        }
+
+        #contact_table tr td:first-child {
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+
+span.notice {
+    font-weight: bold;
+    display: block;
+    margin-top: 35px;
+}
+
+span.warning {
+    font-weight: bold;
+    font-style: italic;
+    color: darkred;
+}

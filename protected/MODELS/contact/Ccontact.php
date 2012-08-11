@@ -6,9 +6,8 @@ class Ccontact{
     var $feedback;
 
     function DISPLAY(){
-        $display  = $this->C->CHILDREN_display->DISPLAY();
 
-        $display .= '<div style="float:right;"><br/>'.$this->feedback.'</div>';
+        $display = '<div style="float:right;"><br/>'.$this->feedback.'</div>';
 
         $display .= file_get_contents(publicPath.'MODELS/contact/RES/'.$this->LG.'/contact.html');
 
@@ -16,34 +15,12 @@ class Ccontact{
             <form action="" method="post" id="form_comp">
                 <input type="hidden" name="action" value="contact" />
 
-                <span style="width:140px; float:left; margin-bottom:5px;">Company </span>
-                    <input type="text" name="company" size="40" id="company" style="margin-bottom:5px;" value="'.$_POST['company'].'" />
-                <br />
-            
-                <span style="width:140px; float:left;">Title</span> 
-                    <input type="radio" name="title" checked="checked" value="Mrs">Mrs
-                    <input type="radio" name="title" value="Miss">Miss
-                    <input type="radio" name="title" value="Mr">Mr
-                <br />
-            
-                <span style="width:140px; float:left;">Name and surname</span> 
+                <span style="width:140px; float:left;">Full name</span>
                     <input type="text" name="name" size="40" id="name" style="margin-bottom:5px;" value="'.$_POST['name'].'" />
-                <br/>
-            
-                <span style="width:140px; float:left;">Position</span> 
-                    <input type="text" name="position" size="40" id="position" style="margin-bottom:5px;" value="'.$_POST['position'].'" />
-                <br/>
-            
-                <span style="width:140px; float:left;">Address </span>
-                    <input type="text" name="address" size="40"  id="address" style="margin-bottom:10px;" value="'.$_POST['address'].'" />
                 <br/>
             
                 <span style="width:140px; float:left;">E-mail </span>
                     <input type="text" name="email" size="40" id="email" style="margin-bottom:5px;" value="'.$_POST['email'].'" />
-                <br/>
-            
-                <span style="width:140px; float:left;"> Telephone</span> 
-                    <input type="text" name="phone" size="40" id="phone" style="margin-bottom:5px;" value="'.$_POST['phone'].'" />
                 <br/>
                 <br/>
             

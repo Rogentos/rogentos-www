@@ -24,7 +24,7 @@ class vars extends item
     #_[DEFAULTS]______________________________________________________________________________________________
 
     /**
-     * the types to work with can be MODELS OR MODULES.
+     * the types to work which can be MODELS OR MODULES.
      * - generaly the modules are used by the models;
      * - every type must have a protected & public part to it
      *
@@ -53,7 +53,7 @@ class vars extends item
      */
 
     var  $mods    = array('MODULES','MODELS');
-    var  $models  = array('single','webchat');
+    var  $models  = array('single','webchat','contact');
     var  $modules = array('Mail','MENUhorizontal');
 
     var  $default_MODULES = array('MENUhorizontal');
