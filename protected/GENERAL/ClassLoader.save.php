@@ -21,4 +21,6 @@ $this->classList['ACsingle'] = '/var/www/dev/rogentos/protected/MODELS/single/AD
 $this->classList['_Cpage'] = '/var/www/dev/rogentos/protected/MODELS/page/_Cpage.php';
 $this->classList['Cabout'] = '/var/www/dev/rogentos/protected/MODELS/about/Cabout.php';
 $this->classList['Ccontact'] = '/var/www/dev/rogentos/protected/MODELS/contact/Ccontact.php';
+$this->classList['Cwebchat'] = '/var/www/dev/rogentos/protected/MODELS/webchat/Cwebchat.php';
+$this->classList['ACwebchat'] = '/var/www/dev/rogentos/protected/MODELS/webchat/ADMIN/ACwebchat.php';
 ?>

@@ -47,38 +47,6 @@ $(document).ready(function(){
     LG = $("input[name=lang]").val();
 
 
-
-
-    role      = new SELoptions(Array('coder','journalist','activist','designer'),Array('coder','journalist','activist','designer'),'');  // selname.getHTMLoptions();
-    roleM     = new SELoptions({0:'coder',1:'journalist',2:'activist',3:'designer'},{0:'coder',1:'journalist',2:'activist',3:'designer'},'');  // selname.getHTMLoptions();
-    statusmod = new SELoptions(Array('unmoderated','rejected','approved'),Array('unmoderated','rejected','approved'),'');  // selname.getHTMLoptions();
-    teamM     = new SELoptions(Array('1','2'),
-           {'1':'RICJn – a decentralized data exchange app for networked data-collections',
-            '2':'Media Owners',
-            '3':'Application for reading a niche publication on handheld devices',
-            '4':'EU money for agriculture',
-            '5':'Multimedia Educational Hub for reporters',
-            '6':'Innovation Lab on Data in Ukraine',
-            '7':'Interactive visualization of national census data',
-            '8':'Creating a Rack Railway Route in Cindrelului Mountains using GRASS and QGIS',
-            '9':'Political colours of Romania interactively mapped',
-            '10':'Easy to set up self-publishing solution',
-            '11':'Public records database',
-            '12':'MediaWatch',
-            '13':'free.ex',
-            '14':'Map of arrests',
-            '15':'Repression vs. accountability. The record and mapping of aggressions and abuses of state forces',
-            '16':'Mapping the stray dogs in Bucharest',
-            '17':'Social Features in Harta Politicii',
-            '999': 'Unaffiliated participants'
-        },'id');  // selname.getHTMLoptions();
-
-
-
-
-
-
-
     $("div[class^=SING]").wrapInner("<div class='content' />")
     $("div[class^=ENT]").wrapInner("<div class='content' />")
 

@@ -1,5 +1,6 @@
 <?php session_start();
-    error_log("===============[ OMC -> NEW PAGE LOAD ]===============", 0);
+    error_log("===============[ Rogentos -> NEW PAGE LOAD ]===============", 0);
+
 
     require_once('../protected/GENERAL/config.php');
     require_once(incPath.'GENERAL/LOG.php');

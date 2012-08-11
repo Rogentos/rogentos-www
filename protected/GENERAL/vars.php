@@ -53,7 +53,7 @@ class vars extends item
      */
 
     var  $mods    = array('MODULES','MODELS');
-    var  $models  = array('single');
+    var  $models  = array('single','webchat');
     var  $modules = array('Mail','MENUhorizontal');
 
     var  $default_MODULES = array('MENUhorizontal');
