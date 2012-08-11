@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*TREBUIE SA REDENUMESC */
+.TOOLSem {float: right; text-align: right;}
+
+.pageCont input[type="text"]{
+    /*padding: 0px;*/
+    outline-offset: 0px;
+
+    border: 0px !important;
+    outline: 1px inset lightgray;
+    background-color:rgba(255,255,255,0.5);
+}
+.pageCont textarea{
+    padding: 0px 0px;
+    overflow: hidden !important;
+    resize: none !important;
+
+    border: 0px !important;
+    outline: 1px inset lightgray;
+    background-color:rgba(255,255,255,0.5);
+}
+.pageCont .TOOLSem input[type='button'],
+.pageCont .TOOLSem input[type=submit]{
+
+    font-size: 9px;
+    margin: 0px;
+    padding: 0px 2px;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+.hotTitle {font-size: 15pt; font-weight: bold;}
+
+table.cke_editor tr:last-child {display: none;}
+span.cke_skin_kama {padding: 0px !important;}
+.cke_skin_kama .cke_wrapper {padding: 1px !important;}

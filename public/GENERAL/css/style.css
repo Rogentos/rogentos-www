@@ -1,0 +1,114 @@
+/* CSS Document */
+html { background: #E1E1E7 url('/GENERAL/css/bg-pattern2.png'); }
+body { position: relative;
+    width:960px; 	padding:0px 0px 20px 0px;
+	margin:5px auto; 	font-size:14px;
+	font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+	box-shadow: 0px 0px 4px #AAA;
+    border-radius: 5px;
+    background: #fff;
+}
+
+a { text-decoration:none; }
+
+/*******************
+ ** 	Header 
+ *******************/
+
+#header {
+    position: relative;
+    height: 150px;
+    background: url('/GENERAL/css/img/rogentos_header_logo.png') no-repeat 0px 30px;
+    box-shadow: 0px 2px 2px -1px #cccccc;
+}
+    #header img {margin: 0px 5px; vertical-align: top; margin-top: 10px;}
+        #header img.hackathon    {width: 320px; height: 115px; }
+        #header img.sponge       {width: 258px; height:  80px; margin-top: 30px;}
+        #header img.baloon_north {width: 335px; height: 215px; }
+
+/*******************
+ ** 	Container
+ *******************/
+
+.pageCont { display: block;
+             margin:40px 0px 0px 0px;
+	         padding:1px 10px 10px 10px;
+	         background:#FFF; color:#333;
+	         font-size:13pt; min-height: 200px; }
+    .pageCont .small { color:#369; font-size: .8em; }
+    .pageCont p { padding:10px;  margin:0; }
+    .pageCont a { color:#555; font-size:14px; font-weight:bold; }
+        .pageCont a:hover { color:#C60; }
+	.page {min-height: 500px;}
+
+body:before, body:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+body:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*******************
+ ** 	Footer 
+ *******************/
+
+#footer { margin: 5px 15px; padding:30px 0px; background:#FFF; overflow:hidden; position: relative;  }
+    #footer .partner { height:80px; padding:5px; margin-top: 50px; border:0px dashed #CCC;
+	                   display: table-cell; vertical-align: middle; background:#FFF; }
+        #footer .partner a { text-align:center; }
+            #footer .partner a img { width:115px; max-height: 120px; }
+            #footer .partner a img.kmoz   { width:115px; height: 25px;}
+            #footer .partner a img.crji   { width:75px;  height: 41px;}
+            #footer .partner a img.geospatial { width:115px; height: 31px;}
+            #footer .partner a img.ceata  { width:115px; height: 34px;}
+            #footer .partner a img.rosedu { width:115px; height: 25px;}
+            #footer .partner a img.apti   { width:100px; height: 45px;}
+
+#license { width:100%; color: #555; margin-bottom: -20px; }
+    #license p { font-size: .8em; text-align: center; }
+        #license p a { color: inherit; text-decoration: none; border-bottom: 1px dotted #0b559b; }
+#terms-popup { display: none; width: 550px; height: 430px; position: fixed;
+               left: 50%; margin-left: -300px; top: 100px; border-radius: 10px;
+               opacity: 1; background: #FFFFFF; padding: 25px; border: 1px dotted #dddddd;
+               clear: both; box-shadow: -2px -2px 20px 2px #999999; }
+.close-button { width: 30px; height: 30px; position: absolute; right: 0px;
+                top: 0px; cursor: pointer; background: #cccccc; border-radius: 0px 10px 0px 8px; }
+    .close-button p { margin: 8px auto; text-align: center;
+                      font-family: sans; font-size: 12px; font-weight: bold; }
+.page { width: 950px; }
+
+.copyleft {
+    font-size: 14px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: inline-block;
+}

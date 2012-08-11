@@ -1,0 +1,45 @@
+# O incercare de a opri cachingul paginii pentru fisierele
+#   care se pot schimba relativ des
+#
+# Intai descriem fisierele tinta:
+
+<ifModule mod_expires.c>
+    ExpiresByType image/jpeg "modification plus 7 days"
+    ExpiresByType image/png "modification plus 7 days"
+</ifModule>
+
+
+
+<filesMatch "\.(html|htm|js|css)$">
+    FileETag None
+
+    # exista modulul headers?
+    <ifModule mod_headers.c>
+        Header unset ETag
+        # acum anuleaza cache pe cat posibil
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </ifModule>
+</filesMatch>
+
+
+# NOTE: This is doomed to fail if mod_rewrite not installed and active
+# After rewrite module's installation, type as root:
+# a2enmod rewrite
+# service apache2 reload
+# English section over :-)
+
+# Activam citirea de URL-uri dubioase
+RewriteEngine On
+
+Redirect 301 /proposals /entry-list
+
+# Rescriere hardcoded pentru linkurile din meniul principal sus+jos, en+ro
+RewriteRule ^(home|acasa)$ /index.php?idC=1&idT=1 [L,NC]
+RewriteRule ^(about|despre-noi)$ /index.php?idC=2&idT=2 [L,NC]
+RewriteRule ^(download|descarca)$ /index.php?idC=3&idT=3 [L,NC]
+RewriteRule ^(webchat)$ /index.php?idC=4&idT=4 [L,NC]
+RewriteRule ^(contact)$ /index.php?idC=5&idT=5 [L,NC]
+
+RewriteRule ^(admin)$ /admin.php [L]

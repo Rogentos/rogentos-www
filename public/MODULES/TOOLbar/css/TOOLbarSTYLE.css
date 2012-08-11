@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {margin-top: 50px !important;}
+
+#admin_TOOLbar
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+
+    padding: 0px 10px;
+
+    background-color: #2d303a;
+}
+
+#admin_TOOLbar table {width: 100%;}
+#admin_TOOLbar table tr td {text-align: right; width: 50%;}
+#admin_TOOLbar table tr td:first-child {text-align: left;}
+
+#admin_TOOLbar .button { display:inline-block; margin-top: 5px;}
+
+
+#admin_TOOLbar .button >*{
+    padding: 2px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    background-color: #20222c;
+    color:#697490;
+    border: none;
+    border-bottom:  1px solid #5d6580;
+
+    font-size: 8pt;
+
+}
+#admin_TOOLbar .button >*:hover{
+    color:orange;
+    cursor: pointer;
+}
+
+#admin_TOOLbar .info { display:inline-block; margin-top: 5px;}
+
+#admin_TOOLbar .info >*{
+    padding: 2px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    background-color: #20222c;
+    color: #8695b7;
+    border: none;
+    border-bottom:  1px solid #5d6580;
+
+    font-size: 8pt;
+
+}
+#admin_POPUP
+{
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+
+
+    width: 100%;
+    min-height:300px;
+    background-color: #f5f5f5;
+    border: 1px solid #808080;
+
+    box-shadow: 0px 3px 9px rgba(0,0,0,0.3);
+
+}
+
+#CLOSE_admin_POPUP {text-align: right;}
+#admin_POPUP_content {margin: 0px 30px;}
+
+#admin_POPUP_content input[type=text],
+#admin_POPUP_content input[type=text]:focus
+{
+
+    border: 1px inset #ccc;
+    padding: 0px 2px;
+    border-radius: 3px;
+    outline: 0px;
+
+    color: #333;
+}
+
+#admin_POPUP_content input[type=button],
+#admin_POPUP_content input[type=submit],
+#admin_POPUP_content select
+{
+
+    border: 1px solid #ccc;
+    border-top: 1px solid #bbb;
+    padding: 1px 9px;
+    border-radius: 5px;
+
+    color: #333;
+    cursor: pointer;
+
+    background: -webkit-linear-gradient(top, #fff 30%, #ddd 80%);
+    box-shadow: 0px -1px 2px 0px #ddd, 0px 2px 1px 0px #fff;
+}
+
+
+#admin_POPUP_content input[type=button]:hover,
+#admin_POPUP_content input[type=submit]:hover,
+#admin_POPUP_content select:hover,
+#admin_POPUP_content select:focus
+{
+    outline: 0px;
+    border: 1px solid #aaa;
+    background:  #87cefa;
+    color: #20222c;
+   /* text-shadow :1px 1px 1px #ddd;*/
+
+}
+
