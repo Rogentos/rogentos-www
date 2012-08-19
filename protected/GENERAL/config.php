@@ -4,7 +4,7 @@ define('baseURL','http://'.$_SERVER['HTTP_HOST'].'/');
 define('basePath',dirname($_SERVER['DOCUMENT_ROOT']).'/');
 
 define('publicURL',baseURL.'');
-define('publicPath',basePath.'public/');
+define('publicPath',basePath.'public_html/');
 
 define('incPath',basePath.'protected/');
 

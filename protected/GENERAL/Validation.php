@@ -1,13 +1,12 @@
 <?php
 /**
- * Clasa de validare scrisa initial pentru CARP "Omenia" in cadrul SEAD
+ * Clasă de validare scrisă inițial pentru CARP "Omenia" în cadrul SEAD
  *
- * @author    Victor Nitu <victor[at]serenitymedia[.]ro>
+ * @author    Victor Nițu <victor @ nospam @ serenitymedia.ro>
  *
- * @desc Clasa de validare scrisa pentru CARP "Omenia" in cadrul SEAD, neterminata
+ * @desc Clasă de validare scrisă pentru CARP "Omenia" în cadrul SEAD
  *
- * TODO: refactoring
- * TODO: callbackuri neergonomice, restructurare necesara
+ * FIXME: Descrierile metodelor au rămas la fel după refactoring
  */
 class Validation{
 
