@@ -96,7 +96,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'root','Site','Admin',NULL,'victor@debian.org.ro','1',NULL,'0.0.0.0',NULL,'a53bd0415947807bcb95ceec535820ee');
+INSERT INTO `users` VALUES (1,'root','Site','Admin',NULL,'victor@debian.org.ro','1',NULL,'0.0.0.0',NULL,'66ffddb43dd2f31df590e2dea33c74ae');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,4 +147,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-19 23:54:48
+-- Dump completed on 2012-08-20  0:36:07
