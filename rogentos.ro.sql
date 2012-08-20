@@ -30,7 +30,7 @@ CREATE TABLE `ITEMS` (
   `new` char(3) NOT NULL,
   `description` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `ITEMS` (
 
 LOCK TABLES `ITEMS` WRITE;
 /*!40000 ALTER TABLE `ITEMS` DISABLE KEYS */;
-INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Despre','About','',NULL),(3,'single','Descarca','Download','',NULL),(4,'webchat','Webchat','Webchat','',NULL),(5,'contact','Contact','Contact','',NULL);
+INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Despre','Despre','',NULL),(3,'single','Descarca','Descarca','',NULL),(4,'webchat','Webchat','Webchat','',NULL),(5,'contact','Contact','Contact','',NULL),(6,'single','Bugs','Implica-te','',NULL),(7,'single','Galerie','Galerie','',NULL);
 /*!40000 ALTER TABLE `ITEMS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `MENUS` (
 
 LOCK TABLES `MENUS` WRITE;
 /*!40000 ALTER TABLE `MENUS` DISABLE KEYS */;
-INSERT INTO `MENUS` VALUES (1,1),(2,1),(3,1),(4,1),(5,1);
+INSERT INTO `MENUS` VALUES (1,1),(2,1),(3,1),(6,1),(4,1),(5,1);
 /*!40000 ALTER TABLE `MENUS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `TREE` (
 
 LOCK TABLES `TREE` WRITE;
 /*!40000 ALTER TABLE `TREE` DISABLE KEYS */;
-INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(0,3,2),(0,4,3),(0,5,4);
+INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(0,3,2),(0,6,3),(0,4,4),(0,5,5);
 /*!40000 ALTER TABLE `TREE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,4 +170,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-20  9:24:29
+-- Dump completed on 2012-08-21  0:26:49
