@@ -25,3 +25,13 @@ span.warning {
     font-style: italic;
     color: darkred;
 }
+
+#contactFloater {
+    padding: 10px;
+    width: 330px;
+    height: 400px;
+    float: right;
+    background: #dedede;
+    margin-top: -100px;
+    border-radius: 10px;
+}

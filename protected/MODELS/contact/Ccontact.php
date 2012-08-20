@@ -11,7 +11,7 @@ class Ccontact{
 
         $display .= file_get_contents(publicPath.'MODELS/contact/RES/'.$this->LG.'/contact.html');
 
-        $display .= '
+        $display .= '<br/><br/>
             <form action="" method="post" id="form_comp">
                 <input type="hidden" name="action" value="contact" />
 

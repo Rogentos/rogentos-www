@@ -42,4 +42,6 @@ RewriteRule ^(implica-te|implica-te)$ /index.php?idC=6&idT=6 [L,NC]
 RewriteRule ^(webchat)$ /index.php?idC=4&idT=4 [L,NC]
 RewriteRule ^(contact)$ /index.php?idC=5&idT=5 [L,NC]
 
+RewriteRule ^(echipa)$ /index.php?idC=8&idT=2 [L,NC]
+
 RewriteRule ^(admin)$ /admin.php [L]
