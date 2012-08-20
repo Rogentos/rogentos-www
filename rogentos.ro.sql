@@ -30,7 +30,7 @@ CREATE TABLE `ITEMS` (
   `new` char(3) NOT NULL,
   `description` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `ITEMS` (
 
 LOCK TABLES `ITEMS` WRITE;
 /*!40000 ALTER TABLE `ITEMS` DISABLE KEYS */;
-INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Despre','Despre','',NULL),(3,'single','Descarca','Descarca','',NULL),(4,'webchat','Webchat','Webchat','',NULL),(5,'contact','Contact','Contact','',NULL),(6,'single','Bugs','Implica-te','',NULL),(7,'single','Galerie','Galerie','',NULL);
+INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Despre','Despre','',NULL),(3,'single','Descarca','Descarca','',NULL),(4,'webchat','Webchat','Webchat','',NULL),(5,'contact','Contact','Contact','',NULL),(6,'single','Bugs','Implica-te','',NULL),(7,'single','Galerie','Galerie','',NULL),(8,'single','Echipa','Echipa','',NULL);
 /*!40000 ALTER TABLE `ITEMS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +86,7 @@ CREATE TABLE `TREE` (
 
 LOCK TABLES `TREE` WRITE;
 /*!40000 ALTER TABLE `TREE` DISABLE KEYS */;
-INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(0,3,2),(0,6,3),(0,4,4),(0,5,5);
+INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(2,8,0),(0,3,2),(0,6,3),(0,4,4),(0,5,5);
 /*!40000 ALTER TABLE `TREE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,4 +170,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-21  0:26:49
+-- Dump completed on 2012-08-21  2:54:35
