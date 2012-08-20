@@ -46,7 +46,7 @@ if(isset($_GET['logOUT']))
 if($_SESSION['admin'])
 {
     /*$CAD = new CAsetINI($user);*/
-    $CAD = new ACsetINI($DB);
+    $CAD = new ACsetINI();
 }
 else {
     $CAD = new CsetINI();

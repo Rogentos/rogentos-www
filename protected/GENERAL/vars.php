@@ -59,7 +59,7 @@ class vars extends item
     var  $default_MODULES = array('MENUhorizontal');
     var  $default_MODELS  = array('single');
 
-    var $menus = array();
+    var $menus = array(1=>'MENUhorizontal');
 
 
     var  $theme_MOD       = array();

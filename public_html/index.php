@@ -26,11 +26,5 @@
 
     <? require_once(publicPath.'GENERAL/RES/footer.php'); ?>
 
-    <script type="text/javascript"  src="/GENERAL/js/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script type="text/javascript"  src="/GENERAL/js/ckeditor/ckeditor.js" type="text/javascript"></script>
-
-    <?php echo $CAD->INC_js; ?>
-
-
   </body>
 </html>

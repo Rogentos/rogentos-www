@@ -20,6 +20,14 @@
     <script async type="text/javascript"  src="/GENERAL/js/ckeditor/ckeditor.js" type="text/javascript"></script>
 
     <link rel="icon" type="image/png" href="/GENERAL/css/img/icon.png" />
+
+    <script type="text/javascript"  src="/GENERAL/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript"  src="/GENERAL/js/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script type="text/javascript"  src="/GENERAL/js/jquery-ui-1.8.19.custom/js/jquery-ui-1.8.19.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript"  src="/GENERAL/js/jquery.ui.nestedSortable.js" type="text/javascript"></script>
+
+    <?php echo $CAD->INC_js; ?>
+
 </head>
 
 

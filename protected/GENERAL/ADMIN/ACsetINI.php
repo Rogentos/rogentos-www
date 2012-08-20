@@ -1,6 +1,75 @@
 <?php
+class ACManage extends  ADMIN_vars
+{
+    function delete_contentRES($dir) {
+           // open the directory
+           $dhandle = opendir($dir);
 
-class ACsetINI extends ADMIN_vars
+           if ($dhandle)
+           {
+              while (false !== ($fname = readdir($dhandle)))
+              {
+                  if(($fname != '.') && ($fname != '..'))
+                  {
+                          if (is_dir( "{$dir}/{$fname}" ) )  $this->delete_contentRES("$dir/$fname");
+                          else  unlink("{$dir}/{$fname}");
+                  }
+              }
+              closedir($dhandle);
+            }
+
+           //rmdir($dir);
+        }
+    function solve_affectedMOD($affectedMOD,$typeMOD='MODULES') {
+
+            foreach($affectedMOD AS $modNAME)
+            {
+
+                $RESpath = publicPath.$typeMOD.'/'.$modNAME.'/RES/';
+                $this->delete_contentRES( $RESpath);
+            }
+        }
+
+
+    function regenerateALLtrees()    {
+
+           $queryRES = $this->DB->query("SELECT Cid AS idT from TREE WHERE Pid='0' ");
+
+           while($row = $queryRES->fetch_assoc())
+            { $this->SET_REStree($row['idT']); unset($this->TMPtree);}
+       }
+    function create_masterTREE()     {
+
+          $RES_TREE = publicPath.'GENERAL/RES_TREE/';
+
+          if(  is_dir($RES_TREE) )
+          {
+              $dir = dir($RES_TREE);
+              $masterTREE = array();
+
+              while(false!== ($file=$dir->read()) )
+              {
+                  $arr_file = explode('.',$file);
+                  if( end($arr_file) =='txt'  )
+                  {
+                      $file_path = $RES_TREE.$file;
+                      $tree = unserialize(file_get_contents($file_path));
+
+                      $masterTREE = $masterTREE + $tree;
+
+                     unlink($file_path);   //stergem toate TREE-urile;
+                  }
+              }
+
+             /* if($this->masterTREE)
+                  foreach($this->masterTREE AS $id=>$item)
+                      echo 'id='.$id.' nameF='.$item->nameF.' type='.$item->type."<br/>";*/
+              return $masterTREE;
+          }
+
+      }
+}
+class ACsetINI extends ACManage
 {
 /*
 
@@ -9,7 +78,7 @@ class ACsetINI extends ADMIN_vars
         $this->DB = DB::getInstance();
     }*/
 
-    public function RESET_select_all($type='')  {
+    public function RESET_select_all($type='')      {
 
 
             /*<select id="combobox">
@@ -56,24 +125,23 @@ class ACsetINI extends ADMIN_vars
 
 
         }
-    public function tree_fromDB($ch,$p_id='')   {
+    public function GET_tree_fromDB($ch,$p_id='')   {
 
         foreach($ch AS $id_ch)
         {
             $this->TMPtree[$id_ch] = new item();
 
-            $q = "SELECT name_ro,name_en,type, new, description from ITEMS where id='$id_ch' ;";
+            $q = "SELECT name_ro,name_en,type from ITEMS where id='$id_ch' ;";
             $q_arr = $this->DB->query($q)->fetch_assoc();
 
 
             $this->TMPtree[$id_ch]->name    = $q_arr['name_en'];
-            $this->TMPtree[$id_ch]->desc    = $q_arr['description'];
 
             $this->TMPtree[$id_ch]->name_ro = $q_arr['name_ro'];
             $this->TMPtree[$id_ch]->name_en = $q_arr['name_en'];
 
             $this->TMPtree[$id_ch]->type    = $q_arr['type'];
-            $this->TMPtree[$id_ch]->new     = $q_arr['new'];
+          /*  $this->TMPtree[$id_ch]->new     = $q_arr['new'];*/
             $this->TMPtree[$id_ch]->id      = $id_ch;
             $this->TMPtree[$id_ch]->p_id    = $p_id;
 
@@ -89,14 +157,14 @@ class ACsetINI extends ADMIN_vars
 
 
             if($q_res->num_rows)
-                $this->tree_fromDB($this->TMPtree[$id_ch]->children,$id_ch);
+                $this->GET_tree_fromDB($this->TMPtree[$id_ch]->children,$id_ch);
 
         }
 
     }
     public function SET_REStree($idT)     {
 
-        $this->tree_fromDB(array($idT));
+        $this->GET_tree_fromDB(array($idT));
 
         $tree_SER = serialize($this->TMPtree);
         file_put_contents(publicPath.'GENERAL/RES_TREE/tree'.$idT.'.txt',$tree_SER);
@@ -105,7 +173,7 @@ class ACsetINI extends ADMIN_vars
         return $this->TMPtree;
 
     }
-    public function SET_tree()                  {
+    public function SET_tree()                          {
 
 
         if($this->idT)
@@ -136,15 +204,18 @@ class ACsetINI extends ADMIN_vars
 
         $OB_name ='AC'.$mod_name;
 
-        if(isset($this->admin_MOD[$mod_name]) && file_exists(incPath.$type_MOD."/{$mod_name}/ADMIN/".$OB_name.'.php') && !is_object($this->$mod_name))
+        if(isset($this->admin_MOD[$mod_name]) && file_exists(incPath.$type_MOD."/{$mod_name}/ADMIN/".$OB_name.'.php'))
            $this->$mod_name = new $OB_name($this);
         else
             parent::SET_OBJ_mod($mod_name,$type_MOD);
     }
     public function SET_INC_jsCss($mod_name,$type_MOD, $ADMINstr='')  {
 
-       if(isset($this->admin_MOD[$mod_name]))  parent::SET_INC_jsCss($mod_name,$type_MOD,'/ADMIN');
-                                               parent::SET_INC_jsCss($mod_name,$type_MOD);
+     //  if(isset($this->admin_MOD[$mod_name])) (daca de exemplu am un css sau js pt ADMIN dar nu am class AC)
+
+
+           parent::SET_INC_jsCss($mod_name,$type_MOD,'/ADMIN');
+           parent::SET_INC_jsCss($mod_name,$type_MOD);
 
 
     }
@@ -167,11 +238,10 @@ class ACsetINI extends ADMIN_vars
 
     }
     /*______________________________________________________________________________________________________________  */
-    function __construct($DB)                      {
+    function __construct()        {
 
        $this->admin = true;
        $this->DB = new mysqli(dbHost,dbUser,dbPass,dbName);
-
        $this->CONTROL_setINI();
 
 
