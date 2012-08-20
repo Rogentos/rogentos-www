@@ -22,15 +22,15 @@
                     </div>
                 </div>
                  <div class='block_addNew'>
-                            <input type='hidden' name='lastID' value='6' />
+                            <input type='hidden' name='lastID' value='8' />
                             <input type='button' name='addNew' value='add' onclick='addNewITEM()' class='Tbar_but' />
                             <input type='text'   name='itemName'value='' placeholder='item name'>
                             <span  class='types'>
                                  <select name='type' class='Tbar_but'>
 
                                     <!-- <option class='newsletter'> newsletter</option>-->
-                                    <option class='contact'> contact</option>
                                      <option class='single'> single</option>
+                                     <option class='contact'> contact</option>
                                      <option class='webchat'> webchat</option>
 
                                     <!-- <option class='products'> products</option> -->
@@ -49,7 +49,10 @@
                        <li id='list_MenuFREE' >
                            <div>Free Items</div>
                            
-<ol  id='children_new'></ol>
+<ol  id='children_new'>
+<li id='list_7'>
+                    <div class='single'>Galerie</div>
+<ol></ol></li></ol>
                        </li> 
 
                                                                                                           
@@ -62,10 +65,13 @@
                     <div class='single'>Home</div>
 <ol></ol></li>
 <li id='list_2'>
-                    <div class='single'>About</div>
+                    <div class='single'>Despre</div>
 <ol></ol></li>
 <li id='list_3'>
-                    <div class='single'>Download</div>
+                    <div class='single'>Descarca</div>
+<ol></ol></li>
+<li id='list_6'>
+                    <div class='single'>Implica-te</div>
 <ol></ol></li>
 <li id='list_4'>
                     <div class='webchat'>Webchat</div>
@@ -76,4 +82,4 @@
                         </li>
                      
 
-</ol>
+</ol><div><br/><br />updateITEM type = single<br/> id = 6 --- OLD ----Feedback ---NEW ---Implica-te<br/>UPDATE ITEMS set name_en='Implica-te' , type='single'  WHERE id='6' <br/>updateTREE type = updateTREE<br/>A fost deletatat tot TREEul cu query-ul DELETE from TREE -- DELETE from MENUS<br /><br/>Meniul Menu1<br/>INSERT into TREE (Pid,Cid,poz) values ('0','1','0')<br/>INSERT into MENUS (id,idM) values ('1','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','2','1')<br/>INSERT into MENUS (id,idM) values ('2','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','3','2')<br/>INSERT into MENUS (id,idM) values ('3','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','6','3')<br/>INSERT into MENUS (id,idM) values ('6','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','4','4')<br/>INSERT into MENUS (id,idM) values ('4','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','5','5')<br/>INSERT into MENUS (id,idM) values ('5','1')<br/><br/></div>

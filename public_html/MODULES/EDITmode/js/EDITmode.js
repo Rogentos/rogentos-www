@@ -361,7 +361,7 @@ function REPLACE(EDtype, EDname, EDvalue,formName)
     {
         //alert('editor');
         toolbar_conf = 'smallTOOL';
-        toolbar_conf = (EDtag_width < 400 ? 'EXTRAsmallTOOL' : 'Comoti' );
+        toolbar_conf = (EDtag_width < 400 ? 'EXTRAsmallTOOL' : 'Full' );
 
         CKEDITOR.replace( 'editor_'+EDname+'_'+LG,
                               {

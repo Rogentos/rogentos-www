@@ -17,7 +17,7 @@ class ACGEN_edit
     var $dispPATH ='';
 
     var $POSTparsers = array('ACheaders');                #this are adittions to the general edit functionality
-    var $affectedMODULES = array('MENUhorizontal','menuPROD','siteMap','GEN_edit');
+    var $affectedMODULES = array('MENUhorizontal','GEN_edit');
     /**
      *  RULE: all affectedMODULES should have - a RES [lg]
      *                                        - an OBJECT to reconstruct those RES
@@ -141,8 +141,8 @@ class ACGEN_edit
                                  <select name='type' class='Tbar_but'>
 
                                     <!-- <option class='newsletter'> newsletter</option>-->
-                                    <option class='contact'> contact</option>
                                      <option class='single'> single</option>
+                                     <option class='contact'> contact</option>
                                      <option class='webchat'> webchat</option>
 
                                     <!-- <option class='products'> products</option> -->
@@ -234,6 +234,13 @@ $html .="
 
     }
 
+    function htReplace($source, $destination) {
+        $htaccess = publicPath.'.htaccess';
+        $htcontent = file_get_contents($htaccess);
+        $htcontent = str_replace($source, $destination,$htcontent);
+        file_put_contents($htaccess,$htcontent);
+    }
+
     function seoITEM($id,$detail)      {
 
             $SEO_arrSer = serialize($detail);
@@ -288,6 +295,10 @@ $html .="
     #========================================[ UPDATE DB ]==============================================================
              $query = "UPDATE ITEMS set name_{$LG}='{$name_new}' , type='{$type_new}'  WHERE id='{$id}' ";
              $this->DB->query($query);
+
+
+    #========================================[ UPDATE .htaccess ]=======================================================
+             $this->htReplace(strtolower($name_old),strtolower($name_new));
 
 
     #___________________________________________________________________________________________________________________

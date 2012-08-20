@@ -19,14 +19,14 @@ CKEDITOR.editorConfig = function( config )
 
 					
 
-    config.filebrowserBrowseUrl          = './INC/js/kcfinder/browse.php?type=files';
-    config.filebrowserImageBrowseUrl     = './INC/js/kcfinder/browse.php?type=images';
-    config.filebrowserFlashBrowseUrl     = './INC/js/kcfinder/browse.php?type=flash';
-    config.filebrowserUploadUrl          = './INC/js/kcfinder/upload.php?type=files';
-    config.filebrowserImageUploadUrl     = './INC/js/kcfinder/upload.php?type=images';
-    config.filebrowserFlashUploadUrl     = './INC/js/kcfinder/upload.php?type=flash';
+    config.filebrowserBrowseUrl          = '/GENERAL/js/kcfinder/browse.php?type=files';
+    config.filebrowserImageBrowseUrl     = '/GENERAL/js/kcfinder/browse.php?type=images';
+    config.filebrowserFlashBrowseUrl     = '/GENERAL/js/kcfinder/browse.php?type=flash';
+    config.filebrowserUploadUrl          = '/GENERAL/js/kcfinder/upload.php?type=files';
+    config.filebrowserImageUploadUrl     = '/GENERAL/js/kcfinder/upload.php?type=images';
+    config.filebrowserFlashUploadUrl     = '/GENERAL/js/kcfinder/upload.php?type=flash';
 
- config.toolbar = 'Comoti';
+ config.toolbar = 'Full';
 	config.toolbar_Comoti =
 [
 	{ name: 'document', items : [ 'Print'] },
@@ -91,5 +91,5 @@ config.toolbar_Full =
         { name: 'insert', items : [ 'Image','Flash','Table' ] }
     ];
 
-    config.resize_enabled = false;
+    config.resize_enabled = true;
 };

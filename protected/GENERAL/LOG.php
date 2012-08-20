@@ -20,6 +20,7 @@ spl_autoload_register(array(ClassLoader::getInstance(), 'loadClass'));
 $log = new logmein(dbHost,dbName,dbUser,dbPass);
 $log->encrypt = true; //set encryption
 
+if(isset($_POST['password']))
 if(strlen($_POST['password']) > 0){
     if($log->login("logon", $_POST['username'], $_POST['password']) == true)
     {
@@ -43,7 +44,7 @@ if(isset($_GET['logOUT']))
 
 
 
-if($_SESSION['admin'])
+if(isset($_SESSION['admin']))
 {
     /*$CAD = new CAsetINI($user);*/
     $CAD = new ACsetINI();

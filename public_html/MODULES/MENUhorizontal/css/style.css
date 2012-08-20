@@ -2,6 +2,7 @@
 ul.MENUhorizontal{
     position: absolute;
     right: 0px;
+    margin-right: 10px;
     list-style: none;
     padding: 10px;
     padding-top: 5px;
@@ -21,18 +22,19 @@ ul.MENUhorizontal>li:hover {
 ul.MENUhorizontal>li a{
     display: inline-block;
     height: 18px;
-    padding: 5px 10px;
-    /*background: #eaf2ff;*/
-    /*box-shadow: inset 2px 2px 2px #ffffff;*/
-    /*box-shadow: 0px 2px 2px -1px #cccccc;*/
-    border-bottom: 2px solid #cccccc;
-    color: #060947 !important;
+    /*padding: 5px 10px;*/
+    /*border-bottom: 2px solid #cccccc;*/
+    padding: 1px 10px;
+    border-radius: 0px 0px 7px 0px;
+    margin-right: 0px;
+    border-bottom: 1px solid #666;
+    color: #aaaaaa !important;
     text-align: center;
     font-size: 12px;
 }
 
 ul.MENUhorizontal>li a:hover {
-    color: #000000 !important;
+    color: #eeeeee !important;
     /*box-shadow: inset 2px 2px 2px #cccccc;*/
     /*box-shadow: 0px 2px 2px -1px #000000;*/
     border-bottom: 2px solid #000000;

@@ -9,7 +9,7 @@
     <base href="<?php echo publicURL; ?>" />
 
     <link rel="stylesheet" href="/GENERAL/css/style.css"  />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 
     <meta name="description" content="<?php echo $CAD->desc; ?>" />
     <meta name="keywords" content="rogentos, gnu linux, linux, gentoo, sabayon, romania" />
@@ -39,6 +39,7 @@
     <input type='hidden' name='lang'        value='<?php echo $CAD->lang; ?>' />
     <input type='hidden' name='lang2'       value='<?php echo $CAD->lang2; ?>'/>
     <div id='header'>
+        <a href="/"><img src="/GENERAL/css/img/rogentos_header_logo_w.png" alt="Rogentos GNU/Linux" id="rlogo" /></a>
         <div id="menu"><?php echo $CAD->MENUhorizontal->DISPLAY(); ?></div>
     </div>
 

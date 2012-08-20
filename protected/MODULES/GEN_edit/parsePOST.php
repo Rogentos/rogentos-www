@@ -27,7 +27,7 @@ class CTRL_CHANGES
 
                 $mes .="\n ".'Meniul '.$id.' ';
                 $tree[$id] = array();
-                if($id_ch['children'])$this->updateTREE($id_ch['children'],$mes,$tree[$id], 0,'');
+                if(isset($id_ch['children']))$this->updateTREE($id_ch['children'],$mes,$tree[$id], 0,'');
 
             }
             else
