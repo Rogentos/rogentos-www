@@ -44,6 +44,29 @@ INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Desp
 UNLOCK TABLES;
 
 --
+-- Table structure for table `MENUS`
+--
+
+DROP TABLE IF EXISTS `MENUS`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `MENUS` (
+  `id` int(3) NOT NULL,
+  `idM` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `MENUS`
+--
+
+LOCK TABLES `MENUS` WRITE;
+/*!40000 ALTER TABLE `MENUS` DISABLE KEYS */;
+INSERT INTO `MENUS` VALUES (1,1),(2,1),(3,1),(4,1),(5,1);
+/*!40000 ALTER TABLE `MENUS` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `TREE`
 --
 
@@ -63,7 +86,7 @@ CREATE TABLE `TREE` (
 
 LOCK TABLES `TREE` WRITE;
 /*!40000 ALTER TABLE `TREE` DISABLE KEYS */;
-INSERT INTO `TREE` VALUES (0,1,1),(0,2,2),(0,3,3),(0,4,4),(0,5,5);
+INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(0,3,2),(0,4,3),(0,5,4);
 /*!40000 ALTER TABLE `TREE` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,4 +170,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-08-20  0:36:07
+-- Dump completed on 2012-08-20  9:24:29
