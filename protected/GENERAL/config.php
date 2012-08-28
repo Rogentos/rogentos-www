@@ -11,10 +11,10 @@ define('incPath',basePath.'protected/');
 set_include_path(basePath.'protected/');
 
 
-define('dbHost', 'localhost');
-define('dbName', 'rogentos.ro');
-define('dbUser', 'rogentos');
-define('dbPass', 'r0g3nt0s');
+define('dbHost', '');
+define('dbName', '');
+define('dbUser', '');
+define('dbPass', '');
 
 define('smtpServer','');
 define('smtpUser','');

@@ -113,15 +113,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'root','Site','Admin',NULL,'victor@debian.org.ro','1',NULL,'0.0.0.0',NULL,'66ffddb43dd2f31df590e2dea33c74ae');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Temporary table structure for view `view_TREE`
@@ -155,7 +146,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET character_set_results     = utf8 */;
 /*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50013 DEFINER=`koltzu_rgnts-www`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `view_TREE` AS select `TREE`.`Pid` AS `Pid`,`TREE`.`Cid` AS `Cid`,`ITEMS`.`type` AS `type`,`ITEMS`.`name_ro` AS `name_ro`,`ITEMS`.`name_en` AS `name_en`,`TREE`.`poz` AS `poz`,`ITEMS`.`new` AS `new` from (`TREE` join `ITEMS` on((`TREE`.`Cid` = `ITEMS`.`id`))) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;

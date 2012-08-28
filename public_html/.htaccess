@@ -17,11 +17,24 @@
     <ifModule mod_headers.c>
         Header unset ETag
         # acum anuleaza cache pe cat posibil
-        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
-        Header set Pragma "no-cache"
-        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+        #Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        #Header set Pragma "no-cache"
+        #Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
     </ifModule>
 </filesMatch>
+
+    ExpiresActive On
+    ExpiresDefault A0
+
+    # O saptamana
+    <filesmatch ".(jpg|jpeg|png|gif|swf|txt)$">
+       ExpiresDefault A604800
+    </filesmatch>
+
+    # 3 ore
+    <filesmatch ".(js|css)$">
+       ExpiresDefault A2419200
+    </filesmatch>
 
 
 # NOTE: This is doomed to fail if mod_rewrite not installed and active
