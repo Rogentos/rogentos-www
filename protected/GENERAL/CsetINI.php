@@ -204,6 +204,7 @@ class CsetINI extends  vars
            *      -apeleaza CONTROL_setINI
            */function __construct()              {
 
+    // Uncomment these two lines when server comes back from the dead :-)
        $this->DB = new mysqli(dbHost,dbUser,dbPass,dbName);
        echo  $this->DB->error;
 

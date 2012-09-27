@@ -4,14 +4,10 @@
  *      Copyright 2011 Victor Nitu <victor@debian-linux.ro>
  */
 
+require_once 'config.php';
+
 class logmein {
-    //db setup
-       //completarea valorilor e cam obligatorie
-    var $hostname_logon = 'localhost';	//ADRESA serverul MySQL
-    var $database_logon = 'rogentos';		//NUMELE bazei de date
-    var $username_logon = 'ioana';		//UTILIZATORUL bazei de date
-    var $password_logon = '03061987';		//PAROLA utilizatorului
- 
+
     //tabela de useri
     var $user_table = 'users';		//numele tabelei de UTILIZATORI
     var $group_table = 'app_userclasses';		//numele tabelei de GRUPURI
@@ -27,16 +23,16 @@ class logmein {
  
     //conectarea la baza de date
     function dbconnect(){
-        mysql_connect($this->hostname_logon, $this->username_logon, $this->password_logon) or die ('Unable to connect to the database');
-        mysql_select_db($this->database_logon) or die ('Unable to select database!');
+        mysql_connect(dbHost, dbUser, dbPass) or die ('Unable to connect to the database');
+        mysql_select_db(dbName) or die ('Unable to select database!');
         return;
     }
 
-    public function __construct($hostname=NULL,$database=NULL,$username=NULL,$password=NULL) {
-        $this->hostname_logon = (isset($hostname) ? $hostname : $this->hostname_logon);
-        $this->database_logon = (isset($database) ? $database : $this->database_logon);
-        $this->username_logon = (isset($username) ? $username : $this->username_logon);
-        $this->password_logon = (isset($password) ? $password : $this->password_logon);
+    public function __construct($hostname=dbHost,$database=dbName,$username=dbUser,$password=dbPass) {
+        $this->hostname_logon = (isset($hostname) ? $hostname : dbHost);
+        $this->database_logon = (isset($database) ? $database : dbName);
+        $this->username_logon = (isset($username) ? $username : dbUser);
+        $this->password_logon = (isset($password) ? $password : dbPass);
     }
 
 

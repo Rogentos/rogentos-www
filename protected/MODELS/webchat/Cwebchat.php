@@ -21,7 +21,7 @@ class Cwebchat{
 
                         </div>
                     </div>
-                    <iframe src='http://webchat.freenode.net/?channels=rogentos-ro' width='935' height='600'></iframe>
+                    <iframe src='http://webchat.freenode.net/?channels=rogentos-dezvoltare' width='935' height='600'></iframe>
                    ";
 
         return  $display;
