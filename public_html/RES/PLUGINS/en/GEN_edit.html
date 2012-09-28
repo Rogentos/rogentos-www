@@ -1,0 +1,96 @@
+<div id='GE_allPages'>
+                           <div id='GE_allMenus'>
+        <ol class='sortable'>
+                       <li id='list_MenuFREE' >
+                           <div>Free Items</div>
+                           
+<ol  id='children_new'></ol>
+                       </li> 
+
+                                                                                                          
+                    
+ <li id='list_Menu1'>
+                            <div>Meniu_1 MENUhorizontal</div>
+                            
+<ol>
+<li id='list_1'>
+                    <div class='single'>Home</div>
+<ol></ol></li>
+<li id='list_2'>
+                    <div class='single'>Despre</div>
+<ol>
+<li id='list_8'>
+                    <div class='single'>Echipa</div>
+<ol></ol></li></ol></li>
+<li id='list_9'>
+                    <div class='no-edit'>Wiki</div>
+<ol></ol></li>
+<li id='list_7'>
+                    <div class='simpleGallery'>Galerie</div>
+<ol></ol></li>
+<li id='list_3'>
+                    <div class='single'>Download</div>
+<ol></ol></li>
+<li id='list_6'>
+                    <div class='single'>Implica-te</div>
+<ol></ol></li>
+<li id='list_4'>
+                    <div class='webchat'>Webchat</div>
+<ol></ol></li>
+<li id='list_5'>
+                    <div class='contact'>Contact</div>
+<ol></ol></li></ol>
+                        </li>
+                     
+
+</ol></div>
+                           <div id='GE_tools'>
+                                <div id='indicatiiGE'>
+                    <button id='Show_idicatiiGE' class='Tbar_but'>Indicatii</button>
+                    <div id='indicatii_GENedit'>
+                        <pre style='font-size: 11px; '>
+* Edit categorie   - click pe categorie - edit
+
+* Delete categorie - click pe categorie - delete
+                   - daca o categorie va fii deletata ,
+                     toate subcategoriile si produsele
+                     din ea  vor fii deasemenea deletate
+
+* Adauga categorie - scrie numele categoriei
+                   - click pe add
+                   - trage categoria la locul dorit din lista
+
+
+* ATENTIE - modificarile nu se vor salva decat dupa
+            ce s-a apasat pe save
+          - in cazul in care s-a comis vreo gresala se poate iesi
+            din General Edit fara ca acea gresala sa fie salvata
+                        </pre>
+                    </div>
+                </div><div class='block_addNew'>
+                            <input type='hidden' name='lastID' value='10' />
+
+                            <input type='text'   name='itemName'value='' placeholder='item name'>
+                            <span  class='types'>
+                                 <select name='type' class='Tbar_but'>
+                                    <option class='single'>single</option><option class='webchat'>webchat</option><option class='contact'>contact</option><option class='simpleGallery'>simpleGallery</option>
+                                    <option class='none'> none</option>
+                                 </select>
+                            </span>
+                            <input type='button' name='addNew' value='add' onclick='addNewITEM()' class='Tbar_but' />
+
+                            <form action='' method='post'>
+                                <input type='submit' name='SaveChanges' value='Save'  class='Tbar_but'/>
+                            </form>
+                 </div>
+                                                                                                          
+                                 <div id='GE_pageCONF'>
+                                        <div id='GE_ctrlDET'>
+                                            <div id='GE_tabs'></div>
+                                            <div id='GE_buts'></div>
+                                        </div>
+                                      <div id='GE_contDET'></div>
+                                 </div>
+                           </div>
+
+                     </div>oricealtceva <div> updateITEM type =  simpleGallery <br/>  id = 7 --- OLD ----Galerie ---NEW ---Galerie<br/>UPDATE ITEMS set name_en='Galerie' , type='simpleGallery'  WHERE id='7'  <br/> <br/><br />  seoITEM type =  simpleGallery <br/> SEO pe id = 7<br/>UPDATE ITEMS set SEO='a:1:{s:2:"en";a:4:{s:9:"title_tag";s:18:"Galerie de imagini";s:10:"title_meta";s:18:"Galerie de imagini";s:16:"description_meta";s:37:"Galerie de imagini Rogentos GNU/Linux";s:13:"keywords_meta";s:0:"";}}'   WHERE id='7'  <br/> <br/><br /> updateTREE <br/>A fost deletatat tot TREEul cu query-ul DELETE from TREE -- DELETE from MENUS<br /><br/>Meniul Menu1<br/>INSERT into TREE (Pid,Cid,poz) values ('0','1','0')<br/>INSERT into MENUS (id,idM) values ('1','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','2','1')<br/>INSERT into MENUS (id,idM) values ('2','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('2','8','0')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','9','2')<br/>INSERT into MENUS (id,idM) values ('9','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','7','3')<br/>INSERT into MENUS (id,idM) values ('7','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','3','4')<br/>INSERT into MENUS (id,idM) values ('3','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','6','5')<br/>INSERT into MENUS (id,idM) values ('6','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','4','6')<br/>INSERT into MENUS (id,idM) values ('4','1')<br/>INSERT into TREE (Pid,Cid,poz) values ('0','5','7')<br/>INSERT into MENUS (id,idM) values ('5','1')<br/> <br/></div>

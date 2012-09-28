@@ -18,12 +18,13 @@ if (get_magic_quotes_gpc()) {
 }
 
 
-    require_once('../protected/GENERAL/config.php');
-    require_once(incPath.'GENERAL/LOG.php');
+    require_once('../protected/fw/GENERAL/config.local.php');
+    require_once(fw_incPath.'GENERAL/LOG.php');
+
     global $CAD;
     //error_reporting(E_ALL);
 
-   require_once(publicPath.'GENERAL/RES/header.php');
+   require_once(resPath.'GENERAL/header.php');
 ?>
 
     <div id='en' class='pageCont'>
@@ -36,11 +37,12 @@ if (get_magic_quotes_gpc()) {
 -->
         <?php
             $ob_name = $CAD->type;
+            $_SESSION['ob_name'] = $CAD->type;
             echo $CAD->$ob_name->DISPLAY();
         ?>
     </div>
 
-    <? require_once(publicPath.'GENERAL/RES/footer.php'); ?>
+    <? require_once(resPath.'GENERAL/footer.php'); ?>
 
   </body>
 </html>

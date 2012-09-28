@@ -1,3 +1,5 @@
 *.idea
 *.save.php
-*config*.php
+*config.local.php
+simpleGallery/images/*
+simpleGallery/images/thumbs/*

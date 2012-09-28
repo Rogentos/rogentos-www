@@ -1,103 +1,116 @@
--- MySQL dump 10.13  Distrib 5.5.24, for debian-linux-gnu (i686)
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: rogentos.ro
--- ------------------------------------------------------
--- Server version	5.5.24-5-log
+-- Host: localhost
+-- Generation Time: Sep 28, 2012 at 09:10 AM
+-- Server version: 5.5.24-7-log
+-- PHP Version: 5.4.4-4
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Database: `rogentos.ro`
+--
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `ITEMS`
 --
 
-DROP TABLE IF EXISTS `ITEMS`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ITEMS` (
+CREATE TABLE IF NOT EXISTS `ITEMS` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
   `type` char(40) NOT NULL,
   `name_ro` text NOT NULL,
   `name_en` text NOT NULL,
   `new` char(3) NOT NULL,
   `description` text,
+  `SEO` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `ITEMS`
 --
 
-LOCK TABLES `ITEMS` WRITE;
-/*!40000 ALTER TABLE `ITEMS` DISABLE KEYS */;
-INSERT INTO `ITEMS` VALUES (1,'single','Acasa','Home','',NULL),(2,'single','Despre','Despre','',NULL),(3,'single','Descarca','Descarca','',NULL),(4,'webchat','Webchat','Webchat','',NULL),(5,'contact','Contact','Contact','',NULL),(6,'single','Bugs','Implica-te','',NULL),(7,'single','Galerie','Galerie','',NULL),(8,'single','Echipa','Echipa','',NULL);
-/*!40000 ALTER TABLE `ITEMS` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `ITEMS` (`id`, `type`, `name_ro`, `name_en`, `new`, `description`, `SEO`) VALUES
+(1, 'single', 'Acasa', 'Home', '', NULL, ''),
+(2, 'single', 'Despre', 'Despre', '', NULL, ''),
+(3, 'single', 'Descarca', 'Download', '', NULL, 'a:1:{s:2:"en";a:4:{s:9:"title_tag";s:0:"";s:10:"title_meta";s:0:"";s:16:"description_meta";s:0:"";s:13:"keywords_meta";s:0:"";}}'),
+(4, 'webchat', 'Webchat', 'Webchat', '', NULL, ''),
+(5, 'contact', 'Contact', 'Contact', '', NULL, ''),
+(6, 'single', 'Bugs', 'Implica-te', '', NULL, ''),
+(7, 'simpleGallery', 'Galerie', 'Galerie', '', NULL, 'a:1:{s:2:"en";a:4:{s:9:"title_tag";s:18:"Galerie de imagini";s:10:"title_meta";s:18:"Galerie de imagini";s:16:"description_meta";s:37:"Galerie de imagini Rogentos GNU/Linux";s:13:"keywords_meta";s:0:"";}}'),
+(8, 'single', 'Echipa', 'Echipa', '', NULL, 'a:1:{s:2:"en";a:4:{s:9:"title_tag";s:0:"";s:10:"title_meta";s:0:"";s:16:"description_meta";s:0:"";s:13:"keywords_meta";s:0:"";}}'),
+(9, 'none', 'Wiki', 'Wiki', '', NULL, '');
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `MENUS`
 --
 
-DROP TABLE IF EXISTS `MENUS`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `MENUS` (
+CREATE TABLE IF NOT EXISTS `MENUS` (
   `id` int(3) NOT NULL,
   `idM` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `MENUS`
 --
 
-LOCK TABLES `MENUS` WRITE;
-/*!40000 ALTER TABLE `MENUS` DISABLE KEYS */;
-INSERT INTO `MENUS` VALUES (1,1),(2,1),(3,1),(6,1),(4,1),(5,1);
-/*!40000 ALTER TABLE `MENUS` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `MENUS` (`id`, `idM`) VALUES
+(1, 1),
+(2, 1),
+(9, 1),
+(7, 1),
+(3, 1),
+(6, 1),
+(4, 1),
+(5, 1);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `TREE`
 --
 
-DROP TABLE IF EXISTS `TREE`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `TREE` (
+CREATE TABLE IF NOT EXISTS `TREE` (
   `Pid` int(3) NOT NULL,
   `Cid` int(3) NOT NULL,
   `poz` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `TREE`
 --
 
-LOCK TABLES `TREE` WRITE;
-/*!40000 ALTER TABLE `TREE` DISABLE KEYS */;
-INSERT INTO `TREE` VALUES (0,1,0),(0,2,1),(2,8,0),(0,3,2),(0,6,3),(0,4,4),(0,5,5);
-/*!40000 ALTER TABLE `TREE` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `TREE` (`Pid`, `Cid`, `poz`) VALUES
+(0, 1, 0),
+(0, 2, 1),
+(2, 8, 0),
+(0, 9, 2),
+(0, 7, 3),
+(0, 3, 4),
+(0, 6, 5),
+(0, 4, 6),
+(0, 5, 7);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `uid` int(5) NOT NULL AUTO_INCREMENT,
   `username` char(30) DEFAULT NULL,
   `user_rfirst` char(25) DEFAULT NULL,
@@ -110,55 +123,32 @@ CREATE TABLE `users` (
   `lastbrowser` char(255) DEFAULT NULL,
   `password` char(255) DEFAULT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+
+-- --------------------------------------------------------
 
 --
--- Temporary table structure for view `view_TREE`
+-- Stand-in structure for view `view_TREE`
 --
+CREATE TABLE IF NOT EXISTS `view_TREE` (
+`Pid` int(3)
+,`Cid` int(3)
+,`type` char(40)
+,`name_ro` text
+,`name_en` text
+,`poz` int(2)
+,`new` char(3)
+);
+-- --------------------------------------------------------
 
+--
+-- Structure for view `view_TREE`
+--
 DROP TABLE IF EXISTS `view_TREE`;
-/*!50001 DROP VIEW IF EXISTS `view_TREE`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `view_TREE` (
-  `Pid` int(3),
-  `Cid` int(3),
-  `type` char(40),
-  `name_ro` text,
-  `name_en` text,
-  `poz` int(2),
-  `new` char(3)
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
 
---
--- Final view structure for view `view_TREE`
---
+CREATE ALGORITHM=UNDEFINED DEFINER=`koltzu_rgnts-www`@`localhost` SQL SECURITY DEFINER VIEW `view_TREE` AS select `TREE`.`Pid` AS `Pid`,`TREE`.`Cid` AS `Cid`,`ITEMS`.`type` AS `type`,`ITEMS`.`name_ro` AS `name_ro`,`ITEMS`.`name_en` AS `name_en`,`TREE`.`poz` AS `poz`,`ITEMS`.`new` AS `new` from (`TREE` join `ITEMS` on((`TREE`.`Cid` = `ITEMS`.`id`)));
 
-/*!50001 DROP TABLE IF EXISTS `view_TREE`*/;
-/*!50001 DROP VIEW IF EXISTS `view_TREE`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`koltzu_rgnts-www`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `view_TREE` AS select `TREE`.`Pid` AS `Pid`,`TREE`.`Cid` AS `Cid`,`ITEMS`.`type` AS `type`,`ITEMS`.`name_ro` AS `name_ro`,`ITEMS`.`name_en` AS `name_en`,`TREE`.`poz` AS `poz`,`ITEMS`.`new` AS `new` from (`TREE` join `ITEMS` on((`TREE`.`Cid` = `ITEMS`.`id`))) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2012-08-21  2:54:35
