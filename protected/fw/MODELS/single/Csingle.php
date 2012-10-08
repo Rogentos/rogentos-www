@@ -35,6 +35,14 @@ class Csingle{
                         </div>
                   </div>";
 
+
+        if($this->nameF == 'Home') {
+            // $feed = new identicaFeed();
+            //$feed = new Identica('rogentos','equo|R0ger');
+
+            //echo 'Feed: ';
+            //echo $feed->getReplies('json');
+        }
         return  $display;
     }
 
