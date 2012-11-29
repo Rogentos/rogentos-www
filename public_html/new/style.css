@@ -8,7 +8,10 @@ body {margin: 0px auto; background: transparent;}
   border-radius: 0px 0px 10px 10px;
   position: relative;
 }
-.page {min-height: 600px; margin-top: 10px;}
+
+.navbar-container {width: 940px; margin: 0px auto;}
+
+.page {min-height: 600px; margin-top: 10px; margin-bottom: 0px;}
 .page>.row {margin: 0px; padding: 10px 0px;}
 .page>.row>.span2 {min-height: 600px; outline: 1px solid green;}
 .page>.row>.span10 {min-height: 600px; outline: 1px solid red;}
@@ -16,7 +19,7 @@ body {margin: 0px auto; background: transparent;}
 
 .feed {min-height: 100px;}
 
-.footer {min-height: 100px; margin-top: 10px;
+.footer {min-height: 100px; margin-top: 5px;
   background: #ccc;
   background: -webkit-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
   background: -o-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);

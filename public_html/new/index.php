@@ -13,9 +13,9 @@
 
 <body>
 
-    <div class="container">
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
+              <div class="navbar-container">
                 <a href="#" class="brand">Rogentos</a>
                 <ul class="nav pull-right">
                     <li class="dropdown">
@@ -35,8 +35,10 @@
                     <li><a href="#">Implica-te</a></li>
                     <li><a href="#">Webchat</a></li>
                 </ul>
+              </div>
             </div>
         </div>
+    <div class="container">
         <div class="header container-fluid">
             <a href="#" class="header-download btn btn-success">
                 <i class="icon-download-alt icon-white"></i>
@@ -44,12 +46,12 @@
                 <small>Versiunea 1.5 "Kogaion"</small></a>
         </div>
 
-        <div class="page container-fluid bpink">
+        <div class="page container-fluid well">
             <div class="row row-fluid">
-                <div class="span12 ocyan">sdfdfs</div>
+                <div class="span12 ocyan">Page content</div>
             </div>
             <div class="feed row row-fluid ogreen">
-                fsdfsd
+                Feed content
             </div>
         </div>
 
