@@ -1,0 +1,41 @@
+html {
+    /*background: url('http://www.bypeople.com/img/themes_pack/100_Seamless_Patterns/88.jpg');*/
+    background: #333 url('http://dev.linuxd.net/stash/100_Patterns/pattern_024.png');
+    }
+body {margin: 0px auto; background: transparent;} 
+.header {min-height: 200px;
+  background: #666 url('http://dev.linuxd.net/stash/100_Patterns/pattern_014.png');
+  border-radius: 0px 0px 10px 10px;
+  position: relative;
+}
+.page {min-height: 600px; margin-top: 10px;}
+.page>.row {margin: 0px; padding: 10px 0px;}
+.page>.row>.span2 {min-height: 600px; outline: 1px solid green;}
+.page>.row>.span10 {min-height: 600px; outline: 1px solid red;}
+.page>.row>.span12 {min-height: 600px; outline: 1px solid red;}
+
+.feed {min-height: 100px;}
+
+.footer {min-height: 100px; margin-top: 10px;
+  background: #ccc;
+  background: -webkit-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
+  background: -o-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
+  background: -ms-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
+  background: -moz-linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
+  background: linear-gradient(top, #444 0%, #333 10%, #333 90%,#222 100%);
+}
+
+.bpink {background: pink;}
+.bgreen {background: lightgreen;}
+.bbrown {background: lightbrown;}
+.bcyan {background: lightcyan;}
+.opink  {outline: 1px solid pink;}
+.ogreen {outline: 1px solid lightgreen;}
+.obrown {outline: 1px solid lightbrown;}
+.ocyan  {outline: 1px solid lightcyan;}
+ul.nav>li>a {padding: 2px 5px 0px 5px !important; margin: 7px 5px 2px 5px !important;
+             border-bottom: 0px solid #ccc; 
+             border-radius: 0px 0px 0px 7px;
+             border-bottom: 1px solid #666;}
+.navbar {margin-bottom: 10px !important;}
+.header-download {position: absolute; bottom: 20px; right: 20px;}
