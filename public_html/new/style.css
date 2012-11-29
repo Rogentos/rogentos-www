@@ -1,10 +1,10 @@
 html {
     /*background: url('http://www.bypeople.com/img/themes_pack/100_Seamless_Patterns/88.jpg');*/
-    background: #333 url('http://dev.linuxd.net/stash/100_Patterns/pattern_024.png');
+    background: #333 url('res/pattern_024.png');
     }
 body {margin: 0px auto; background: transparent;} 
 .header {min-height: 200px;
-  background: #666 url('http://dev.linuxd.net/stash/100_Patterns/pattern_014.png');
+  background: #666 url('res/pattern_014.png');
   border-radius: 0px 0px 10px 10px;
   position: relative;
 }
