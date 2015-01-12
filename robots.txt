@@ -1,0 +1,2 @@
+User-agent: *
+Dissalow: /w3layouts-license.txt
