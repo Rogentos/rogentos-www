@@ -222,7 +222,7 @@ body {
 .portfoli1{
 	text-align:center;
 	background: #ffffff;
-	padding: 4% 0;
+	padding: 1%;
 }
 .portfoli1 h5 {
 	color: #777;
@@ -741,4 +741,34 @@ body > div.footer-bottom > div > div > ul > li:nth-child(5) {
 	#topnav #navbtn {
 		top: -40px;
 	}
+}
+
+
+.clearfix {
+	margin-top: 25px !important;
+}
+
+.newISO {
+	border: solid 1px black;
+	whidth: 20% !important;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	display: inline-block;
+	font-size: 33px;
+	background-color: #0099CC;
+
+	
+}
+
+
+.whiteText > a{
+	color: white !important;
+}
+
+#downloadISO {
+	margin-left: 10px;
+}
+
+#download {
+	padding-bottom:  -1px !important;
 }
