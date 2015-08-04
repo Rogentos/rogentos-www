@@ -1,0 +1,38 @@
+
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1.png)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1.png)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1.png)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/var/www/dev/nova/public/GENERAL/css/img/oferta1)
+[Error] [Method : loadImage] Unable To Load The Image rogentos_cubul.jpg - File Not Exist
+[Error] [Method : resize]  Not A GD Resource
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/srv/http/rogentos.ro/public_html/fw/MODELS/simpleGallery/images/thumbs/)
+[Error] [Method : saveImage]  Not A GD Resource
+[Error] [Method : loadImage] Unable To Load The Image rogentos_cubul.jpg - File Not Exist
+[Error] [Method : resize]  Not A GD Resource
+[Error] [Method : saveImage] Dest Directory Is Not Exist (/srv/http/rogentos.ro/public_html/fw/MODELS/simpleGallery/images/thumbs/)
+[Error] [Method : saveImage]  Not A GD Resource
+[Error] [Method : loadImage] Unable To Load The Image rogentos_cubul.jpg - File Not Exist
+[Error] [Method : resize]  Not A GD Resource
+[Error] [Method : saveImage]  Not A GD Resource
+[Error] [Method : loadImage] Unable To Load The Image rogentos_cubul.jpg - File Not Exist
+[Error] [Method : resize]  Not A GD Resource
+[Error] [Method : saveImage]  Not A GD Resource
+[Error] [Method : loadImage] Unable To Load The Image rogentos_cubul.jpg - File Not Exist
+[Error] [Method : resize]  Not A GD Resource
+[Error] [Method : saveImage]  Not A GD Resource
+[Error] [Method : isMimeSupported] (TIP_CURRENT) is Not Supported Mime Type
+[Error] [Method : isMimeSupported] (TIP_CURRENT) is Not Supported Mime Type
+[Error] [Method : getMime] Unable to get the mime for (rogentos_cubul.jpg) - File Not Exist
+[Error] [Method : getMime] Unable to get the mime for (rogentos_cubul.jpg) - File Not Exist
