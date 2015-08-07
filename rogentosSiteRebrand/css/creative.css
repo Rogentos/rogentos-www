@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #4592FF;
     border-width: 3px;
 }
 
@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: #4592FF;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #4592FF;
 }
 
 .bg-dark {
@@ -89,7 +89,7 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: #4592FF;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
@@ -107,12 +107,12 @@ aside {
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #4592FF;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: #4592FF!important;
     background-color: transparent;
 }
 
@@ -153,7 +153,7 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40;
+        color: #4592FF;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -168,7 +168,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: #4592FF;
     }
 }
 
@@ -274,7 +274,7 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: #2DABFF;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -305,7 +305,8 @@ header .header-content .header-content-inner p {
 }
 
 .portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 
 @media(min-width:768px) {
@@ -323,7 +324,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: #4592FF;
 }
 
 .no-gutter > [class*=col-] {
@@ -348,7 +349,7 @@ header .header-content .header-content-inner p {
 .open > .dropdown-toggle.btn-default {
     border-color: #ededed;
     color: #222;
-    background-color: #f2f2f2;
+    background-color: #2DABFF;
 }
 
 .btn-default:active,
@@ -385,9 +386,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: #4592FF;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #4592FF;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -401,7 +402,7 @@ fieldset[disabled] .btn-default.active {
 .open > .dropdown-toggle.btn-primary {
     border-color: #ed431f;
     color: #fff;
-    background-color: #ee4b28;
+    background-color: #0058B2;
 }
 
 .btn-primary:active,
@@ -428,12 +429,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: #4592FF;
+    background-color: #4592FF;
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: #4592FF;
     background-color: #fff;
 }
 
@@ -484,4 +485,12 @@ body {
 
 .pageHeadText{
     color:black !important;
+}
+
+
+@media(min-width:1279px) {
+    .centredObject{
+        position:relative;
+        left: 38% !important;
+    }
 }
