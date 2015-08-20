@@ -494,3 +494,15 @@ body {
         left: 38% !important;
     }
 }
+
+@media(min-width:1279px) {
+    #centeredTeam { 
+        position: relative !important;
+        left: 12% !important;
+    }
+}
+
+#event {
+    font-size: 17px;
+    color: #F00 !important;
+}
