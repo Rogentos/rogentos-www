@@ -503,6 +503,21 @@ body {
 }
 
 #event {
-    font-size: 14px;
+    font-size: 12px;
     color: #F00 !important;
+     text-align: center;
+}
+
+
+.customEvent {
+    text-align: center;
+    color: #4592FF !important;
+}
+
+
+@media(min-width:1279px) {
+    .customEvent { 
+        position: relative !important;
+        left: 50% !important;
+    }
 }
