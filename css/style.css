@@ -863,3 +863,7 @@ border: 2px solid #fff;
 .download a:hover {
     color: #262;
 }
+ul.social-link{
+	margin: 0 auto;
+        display: inline-block;
+}
