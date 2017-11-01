@@ -867,3 +867,6 @@ ul.social-link{
 	margin: 0 auto;
         display: inline-block;
 }
+#codsursa > .social-link > li {
+	margin: auto 20px;
+} 
