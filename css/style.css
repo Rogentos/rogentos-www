@@ -612,7 +612,7 @@ border: 2px solid #fff;
 /* Contact
 ---------------------------------*/
 .main-section.contact{
-	padding:90px 0 100px;
+	padding:90px 0 70px;
 }
 
 .main-section.contact{
@@ -668,6 +668,21 @@ border: 2px solid #fff;
 .social-link li a:hover, .social-link li a:focus{
 	text-decoration:none;
 }
+.social-link li div {
+	width:130px; 
+	text-align: -webkit-center;
+}
+.social-link li p {
+	min-height: 50px;
+	padding-bottom: 10px;
+}
+ul.social-link{
+	margin: 0 auto;
+        display: inline-block;
+}
+#codsursa > .social-link > li {
+	margin: auto 20px;
+} 
 .twitter a:hover {
 	background: #55acee;
 }
@@ -863,10 +878,3 @@ border: 2px solid #fff;
 .download a:hover {
     color: #262;
 }
-ul.social-link{
-	margin: 0 auto;
-        display: inline-block;
-}
-#codsursa > .social-link > li {
-	margin: auto 20px;
-} 
