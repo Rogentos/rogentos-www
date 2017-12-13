@@ -470,6 +470,13 @@ border: 2px solid #fff;
 	padding:25px 0;
     filter: alpha(opacity=60);
 }
+.c-logo-part h3{
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+}
 .c-logo-part ul{
 	padding:0;
 	margin:0;
