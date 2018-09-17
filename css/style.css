@@ -885,3 +885,14 @@ ul.social-link{
 .download a:hover {
     color: #262;
 }
+
+.no-margins {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.language-links {
+	position:absolute;
+	top:0;
+	right:5px;
+}
