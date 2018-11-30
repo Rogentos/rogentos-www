@@ -649,6 +649,18 @@ border: 2px solid #fff;
 	display:block;
 	overflow:hidden;
 }
+.discord-link {
+	color: white;
+	/* TODO: migrate to fork-awesome */
+    font-size: 1.5em!important;
+    vertical-align: text-top;
+}
+.social-link-discord-logo {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	content: url("./../img/discord-logo.svg");
+}
 .social-link{
 	padding:35px 0;
 	margin:0 0 0 68px;
@@ -668,7 +680,7 @@ border: 2px solid #fff;
 	line-height:50px;
 	font-size:25px;
 	color:#fff;
-	background:#222222;
+	background:#000000;
 	border-radius:50%;
 	transition:all 0.3s ease-in-out;
 }
