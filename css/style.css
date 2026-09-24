@@ -403,7 +403,7 @@ img {
 /* Clients
 ---------------------------------*/
 .client-part{
-	background:url(../img/section-bg1.jpg) center center no-repeat;
+	background:url(../img/section-bg1.jpg) center 80% no-repeat;
 	background-size:cover;
 	padding:55px 0;
 	text-align:center;
@@ -885,8 +885,19 @@ ul.social-link{
     -ms-filter: FlipH;
 }
 
+.download-heading {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 30px 0 25px;
+}
+
 .download {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .download-btn {
@@ -894,9 +905,9 @@ ul.social-link{
     align-items: center;
     gap: 16px;
     padding: 16px 32px;
-    background: #fff;
-    color: #7cc576;
-    border: 2px solid #fff;
+    background: #f9c727;
+    color: #1a1a1a;
+    border: 2px solid #f9c727;
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
@@ -930,8 +941,8 @@ ul.social-link{
 
 .download-btn:hover,
 .download-btn:focus {
-    background: #7cc576;
-    color: #fff;
+    background: transparent;
+    color: #f9c727;
     text-decoration: none;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
